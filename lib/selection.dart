@@ -41,9 +41,10 @@ class _SelectionState extends State<Selection> {
                       ? Colors.blue
                       : null, // Bilgisayarın seçtiği renk
                 ), // Buton işlevsiz hale getirildi
-                child: Text("Rock (Bot)",
+                child: Text("Rock",
                     style: TextStyle(
                         fontFamily: "PressStart2P",
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         color: computerChoice == 'Rock' ? Colors.white : null)),
               ),
               const SizedBox(width: 10),
@@ -54,9 +55,10 @@ class _SelectionState extends State<Selection> {
                       ? Colors.blue
                       : null, // Bilgisayarın seçtiği renk
                 ), // Buton işlevsiz hale getirildi
-                child: Text("Paper (Bot)",
+                child: Text("Paper",
                     style: TextStyle(
                         fontFamily: "PressStart2P",
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         color:
                             computerChoice == 'Paper' ? Colors.white : null)),
               ),
@@ -68,9 +70,10 @@ class _SelectionState extends State<Selection> {
                       ? Colors.blue
                       : null, // Bilgisayarın seçtiği renk
                 ), // Buton işlevsiz hale getirildi
-                child: Text("Scissors (Bot)",
+                child: Text("Scissors",
                     style: TextStyle(
                         fontFamily: "PressStart2P",
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         color: computerChoice == 'Scissors'
                             ? Colors.white
                             : null)),
@@ -119,6 +122,7 @@ class _SelectionState extends State<Selection> {
                 child: Text("Rock",
                     style: TextStyle(
                         fontFamily: "PressStart2P",
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         color: userChoice == 'Rock' ? Colors.white : null)),
               ),
               const SizedBox(width: 15),
@@ -131,6 +135,7 @@ class _SelectionState extends State<Selection> {
                 ),
                 child: Text("Paper",
                     style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         fontFamily: "PressStart2P",
                         color: userChoice == 'Paper' ? Colors.white : null)),
               ),
@@ -145,6 +150,7 @@ class _SelectionState extends State<Selection> {
                 child: Text("Scissors",
                     style: TextStyle(
                         fontFamily: "PressStart2P",
+                        fontSize: MediaQuery.of(context).size.width * 0.02,
                         color: userChoice == 'Scissors' ? Colors.white : null)),
               ),
             ],

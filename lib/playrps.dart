@@ -31,11 +31,12 @@ class _PlayRpsState extends State<PlayRps> {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Center(
               child: Text(infom,
-                  style: const TextStyle(fontFamily: "PressStart2P")),
+                  style: const TextStyle(
+                      fontFamily: "PressStart2P", fontSize: 11)),
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.05,
           ),
           TextButton(
             onPressed: () {
@@ -66,14 +67,18 @@ class _PlayRpsState extends State<PlayRps> {
               foregroundColor: Colors.white,
               backgroundColor: Colors.blue,
               fixedSize: Size.fromRadius(
-                MediaQuery.of(context).size.height * 0.06,
+                MediaQuery.of(context).size.height * 0.05,
               ),
             ),
-            child:
-                const Text("GO!", style: TextStyle(fontFamily: "PressStart2P")),
+            child: const Text(
+              "GO!",
+              style: TextStyle(
+                fontFamily: "PressStart2P",
+              ),
+            ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.0,
+            height: MediaQuery.of(context).size.height * 0.01,
           )
         ],
       ),
