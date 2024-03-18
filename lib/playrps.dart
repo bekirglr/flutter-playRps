@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playrps/selection.dart';
 
 class PlayRps extends StatefulWidget {
   const PlayRps({Key? key}) : super(key: key);
@@ -23,8 +24,9 @@ class _PlayRpsState extends State<PlayRps> {
       body: Column(
         children: [
           SizedBox(
-              child: Image.asset("rps.gif"),
-              height: MediaQuery.of(context).size.height * 0.5),
+            height: MediaQuery.of(context).size.height * 0.5,
+            child: Image.asset("assets/rps.gif"),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Center(
@@ -35,7 +37,30 @@ class _PlayRpsState extends State<PlayRps> {
             height: MediaQuery.of(context).size.height * 0.1,
           ),
           TextButton(
-            onPressed: () => {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  transitionDuration: Duration(milliseconds: 1000),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      Selection(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var begin = Offset(0.0, -1.0);
+                    var end = Offset.zero;
+                    var curve = Curves.easeInOut;
+
+                    var tween = Tween(begin: begin, end: end)
+                        .chain(CurveTween(curve: curve));
+
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ),
+              );
+            },
             style: TextButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Colors.blue,
