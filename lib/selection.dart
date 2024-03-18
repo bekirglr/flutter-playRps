@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Selection extends StatefulWidget {
   const Selection({super.key});
@@ -22,15 +20,15 @@ class _SelectionState extends State<Selection> {
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: Text("R-P-S Game",
-            style: GoogleFonts.pressStart2p(color: Colors.white)),
+        title: const Text("R-P-S Game",
+            style: TextStyle(fontFamily: "PressStart2P", color: Colors.white)),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "Computer's Choice: $computerChoice",
-            style: GoogleFonts.pressStart2p(),
+            style: const TextStyle(fontFamily: "PressStart2P"),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           Row(
@@ -45,9 +43,10 @@ class _SelectionState extends State<Selection> {
                 ), // Buton işlevsiz hale getirildi
                 child: Text("Rock (Bot)",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color: computerChoice == 'Rock' ? Colors.white : null)),
               ),
-              const SizedBox(width: 15),
+              const SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -57,10 +56,11 @@ class _SelectionState extends State<Selection> {
                 ), // Buton işlevsiz hale getirildi
                 child: Text("Paper (Bot)",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color:
                             computerChoice == 'Paper' ? Colors.white : null)),
               ),
-              const SizedBox(width: 15),
+              const SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -70,6 +70,7 @@ class _SelectionState extends State<Selection> {
                 ), // Buton işlevsiz hale getirildi
                 child: Text("Scissors (Bot)",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color: computerChoice == 'Scissors'
                             ? Colors.white
                             : null)),
@@ -91,7 +92,8 @@ class _SelectionState extends State<Selection> {
                 });
               },
               child: Text(result,
-                  style: GoogleFonts.pressStart2p(color: appBarTextColor)),
+                  style: TextStyle(
+                      fontFamily: "PressStart2P", color: appBarTextColor)),
             ),
           ),
           SizedBox(
@@ -99,7 +101,7 @@ class _SelectionState extends State<Selection> {
           ),
           Text(
             "Your's Choice: $userChoice",
-            style: GoogleFonts.pressStart2p(),
+            style: const TextStyle(fontFamily: "PressStart2P"),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
@@ -116,6 +118,7 @@ class _SelectionState extends State<Selection> {
                 ),
                 child: Text("Rock",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color: userChoice == 'Rock' ? Colors.white : null)),
               ),
               const SizedBox(width: 15),
@@ -128,6 +131,7 @@ class _SelectionState extends State<Selection> {
                 ),
                 child: Text("Paper",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color: userChoice == 'Paper' ? Colors.white : null)),
               ),
               const SizedBox(width: 15),
@@ -140,6 +144,7 @@ class _SelectionState extends State<Selection> {
                 ),
                 child: Text("Scissors",
                     style: TextStyle(
+                        fontFamily: "PressStart2P",
                         color: userChoice == 'Scissors' ? Colors.white : null)),
               ),
             ],

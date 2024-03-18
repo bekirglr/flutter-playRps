@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:playrps/selection.dart';
 
 class PlayRps extends StatefulWidget {
@@ -19,7 +18,8 @@ class _PlayRpsState extends State<PlayRps> {
       appBar: AppBar(
         centerTitle: true,
         toolbarHeight: MediaQuery.of(context).size.height * 0.1,
-        title: Text("WELCOME", style: GoogleFonts.pressStart2p()),
+        title:
+            const Text("WELCOME", style: TextStyle(fontFamily: "PressStart2P")),
       ),
       body: Column(
         children: [
@@ -30,7 +30,8 @@ class _PlayRpsState extends State<PlayRps> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Center(
-              child: Text(infom, style: GoogleFonts.pressStart2p(fontSize: 12)),
+              child: Text(infom,
+                  style: const TextStyle(fontFamily: "PressStart2P")),
             ),
           ),
           SizedBox(
@@ -68,7 +69,8 @@ class _PlayRpsState extends State<PlayRps> {
                 MediaQuery.of(context).size.height * 0.06,
               ),
             ),
-            child: Text("GO!", style: GoogleFonts.pressStart2p(fontSize: 15)),
+            child:
+                const Text("GO!", style: TextStyle(fontFamily: "PressStart2P")),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.0,
